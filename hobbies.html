@@ -1,0 +1,250 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SUHA ROSLI- Personal Website</title> 
+    <style> 
+* { 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            font-family: 'Serif', Times New Roman, Georgia, Garamond; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #d2b48c; 
+            color: #333;
+	    font-size: 18px; 
+	 
+	   
+        } 
+ 
+               header { 
+            background-image:url(header.jpeg); 
+            color: #3d4035; 
+            text-align: center; 
+            padding: 1em; 
+        } 
+ 
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            background-color: #836953; 
+            padding: 1em; 
+        } 
+        nav a { 
+            color: #f5f5dc; 
+            text-decoration: none; 
+            padding: 0.5em 1em; 
+            margin: 0 10px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+	} 
+
+
+       * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Serif', Times New Roman, Georgia, Garamond;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+ p {
+      font-family: 'Times New Roman', serif; 
+      font-size: 18px; 
+      line-height: 1.6; 
+    }
+ 
+        footer { 
+            text-align: center; 
+            padding: 1em; 
+            background-color:#987654; 
+            color: #fff; 
+        } 
+
+a:link {  color: white;
+  background-color: transparent;  text-decoration: none;
+}
+a:visited {
+  color: white;  background-color: transparent;
+  text-decoration: none;}
+a:hover {  color: white;
+  background-color: transparent;  text-decoration: none;
+}
+a:active {
+  color: white;  background-color: transparent;
+  text-decoration: none;}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+    </style> 
+</head> 
+<body> 
+ 
+    <header>
+        <h1> SUHA ROSLI </h1> 
+        <p>Welcome to my personal website!</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="home.html">Home</a> 
+        <a href="aboutme.html">About Me</a> 
+        <a href="family.html">Family</a> 
+        <a href="educations.html">Educations</a> 
+        <a href="friends.html">Friends</a> 
+        <a href="hobbies.html">Hobbies</a> 
+        <a href="favouritemovies.html">Favourite Movies</a>
+    </nav> 
+    
+	<center><img src="hobbies1.jpeg" width="100%"></center>
+    	<center><img src="hobbies2.jpeg" width="100%"></center>
+
+<div style="text-align:center">
+  <h2> MY MENU COLLECTIONS</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="hobbies3.jpeg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hobbies4.jpeg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hobbies5.jpeg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hobbies6.jpeg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+ 
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+<center><p> You guys also can visit my recipes video on tiktok by click this: </p></center>
+	
+	<center><h1 class="title" onclick="openTikTokLink()">Mushroom Oyster</h1></center>
+
+  <script>
+    function openTikTokLink() {
+      // Replace 'https://vt.tiktok.com/ZSNq82KGo/' with the actual TikTok link
+      window.open('https://vt.tiktok.com/ZSNq82KGo/', '_blank');
+    }
+  </script>
+
+<center><h1 class="title" onclick="openTikTokLink()">ButterMilk Chicken</h1></center>
+
+  <script>
+    function openTikTokLink() {
+      // Replace 'https://vt.tiktok.com/ZSNq82KGo/' with the actual TikTok link
+      window.open('https://vt.tiktok.com/ZSNq8hpv6/', '_blank');
+    }
+  </script>
+
+    <footer>
+<center><h2>My Contact <h2></center>
+
+<a href="https://www.facebook.com/profile.php?id=100086918820135&mibextid=9R9pXO" class="fa fa-facebook"></a>
+<a href="http://www.wasap.my/+60138459714/" class="fa fa-whatsapp"></a>
+<a href="https://instagram.com/suharsli_?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr" class="fa fa-instagram"></a>
+
+      
+        <p>&copy; 2023 Suha Rosli. All rights reserved.</p> 
+    </footer> 
+ 
+</body> 
+</html>
